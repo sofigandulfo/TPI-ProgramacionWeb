@@ -11,7 +11,7 @@
 
 #seccion-categoria {
    min-height: 720px;
-   background-color: orange;
+   background-color: var(--light-color-fondo);
 }
 
 .articulo-categoria {
