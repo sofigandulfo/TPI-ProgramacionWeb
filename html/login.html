@@ -3,9 +3,43 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Hind:wght@300;400;500;600;700&family=Magra:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/estilos-login.css">
    <title></title>
 </head>
 <body>
+
+   <form action="" method="get">
+
+      <h1>LogIn</h1>
+      <label for="email">Ingrese email: </label>
+      <input type="email" id="campoTextoEmail" placeholder="ejemplo@ejemplo.com">
+
+      <label for="contra">Ingrese contraseña: </label>
+      
+      <input type="password" id="campoContra" placeholder="*******">
+     
+      <div class="botones">
+         <input type="submit" id="aceptar" class="boton" value="Continar">
+         <input type="reset" id="cancelar" class="boton" value="Cancelar">
+
+      </div>
+
+      <div class="links">
+         <a href="recuperar-password.html" id="recuperar">¿Olvidó su contraseña?</a>
+         <a href="registrarse.html" id="registrarse">Registrarse</a>
+      </div>
+
+      <div class="tyc">
+         <p>Al continuar, confirmo que he leído y aceptado los <a href="https://es.wikipedia.org/wiki/T%C3%A9rminos_y_condiciones_de_uso" target=“_blank” >Terminos y Condiciones.</a>
+         </p>
+      </div>
+      
+   </form>
+   
+
    
 </body>
 </html>

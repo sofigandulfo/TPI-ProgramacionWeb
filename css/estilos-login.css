@@ -1,1 +1,87 @@
 ﻿/* estilos-login.css */
+
+*{	
+    background-color: #fff0f5;
+	
+}
+
+
+
+form{   
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 300px;
+    
+    align-items:center;
+	display:flex;
+	flex-direction:column;
+    margin: 0 auto;
+   
+    	
+}
+
+form label{
+    align-self: flex-start;
+
+}
+form input{
+    
+    margin-bottom: 10px;
+    width:300px;
+    background-color: white;
+    justify-content: center;
+    
+   
+}
+
+h1{
+    margin: 0 auto;	
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#aceptar{
+    
+    background-color: #81b29a;
+    
+}
+
+#cancelar{
+    background-color: #ffb347;
+}
+
+.boton{
+    
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+    display:flex;
+    flex-direction:column;
+
+    border: none;
+    border-radius: 10px;
+}
+.boton:hover{
+    filter: brightness(85%);
+}
+.links{
+    display:flex;
+    flex-direction:line;
+    align-self: normal;
+    justify-content: space-between;
+}
+
+a, a:hover, a:visited, a:active {
+  color: blue;
+  text-decoration: none;
+ }
+
+
+
+
+
