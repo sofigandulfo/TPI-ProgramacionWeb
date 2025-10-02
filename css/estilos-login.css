@@ -81,7 +81,22 @@ a, a:hover, a:visited, a:active {
   text-decoration: none;
  }
 
+ 
+@media screen and (max-width: 900px)
+{
+    form{
+        width: 200px;
+        font-size: 0.8em;
+        
+    }
+    
+    form input{
+       width: 200px;
+       
+    }
 
+    
+}
 
 
 
