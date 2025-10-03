@@ -6,7 +6,29 @@
 }*/
 
 #navegacion-categoria {
-   background-color: lime;
+   display: flex;
+  justify-content: center;
+  gap: 10px; 
+  margin: 20px 0;
+}
+
+#navegacion-categoria .tab-categoria {
+   padding: 10px 20px;
+  border-radius: 6px;
+  background-color: #ffb347;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+#navegacion-categoria .tab-categoria:hover {
+  background-color: #ff6b66;
+}
+
+#navegacion-categoria .tab-categoria:active {
+  background-color: #ff3c38; 
+  color: black;
+  border-color: #ff3c38;
 }
 
 #seccion-categoria {
