@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="css/estilos-principal.css">
    <link rel="stylesheet" href="css/estilos-section-principal.css">
    <link rel="stylesheet" href="css/estilos-principal-header.css">
+   <link rel="stylesheet" href="css/estilos-footer.css">
 </head>
 
 <body>
@@ -320,10 +321,31 @@
    </main>
 
    <footer id="footer-principal">
-      <div id="footer-principal-izquierda">FOOTER PRINCIPAL (IZQUIERDA)</div>
-      <div id="footer-principal-centro">FOOTER PRINCIPAL (CENTRO)</div>
-      <div id="footer-principal-derecha">FOOTER PRINCIPAL (DERECHA)</div>
-   </footer>
+        <div id="footer-principal-izquierda">
+            <a href="#">Politicas de Privacidad</a>
+            <br>
+            <a href="#">Terminos y Condiciones</a>
+        </div>
+        <div id="footer-principal-centro">
+            <h2>Siguenos</h2>
+            <div class="redes-sociales">
+                <a href="#"><img src="/assets/img/icons8-facebook-50.png" alt="Facebook"/></a>
+                <a href="#"><img src="/assets/img/icons8-twitterx-50.png" alt="X"/></a>
+                <a href="#"><img src="/assets/img/icons8-instagram-50.png" alt="Instagram"/></a>
+            </div>
+            
+            <form class="newsletter-form">
+                <label for="suscripcion">Suscribete a la Newsletter:</label>
+                <input type="email" placeholder="Tu correo @gmail"required>
+                <button type="submit">Suscribete</button>
+            </form>
+        </div>
+        <div id="footer-principal-derecho">
+            <a href="#">Acerca de nosotros</a>
+            <br>
+            <a href="#">Contactanos</a>
+        </div>
+       </footer>
 
    <!-- INICIO | NO MODIFICAR/NO QUITAR: 'cargar-datos.js' realiza la carga de datos -->
    <script type="module" src="js/cargar-datos.js"></script>
