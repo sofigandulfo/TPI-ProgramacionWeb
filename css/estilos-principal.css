@@ -50,4 +50,15 @@
    height:100px;
 }
 
+@media screen and (max-width: 768px) {
+   #navegacion-categoria {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   #navegacion-categoria .tab-categoria {
+      width: 80%;   
+   }
+}
 
