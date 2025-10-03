@@ -1,47 +1,56 @@
 ﻿/* estilos-login.css */
 
-*{	
+body{	
     background-color: #fff0f5;
+    border-color: #81b29a;
 	
 }
 
-
+.login-section{
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #81b29a;
+     font-family: "Hind", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    
+    
+    
+}
 
 form{   
-    font-family: "Hind", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    width: 300px;
-    
     align-items:center;
 	display:flex;
-	flex-direction:column;
-    margin: 0 auto;
-   
-    	
+	flex-direction:column;	
 }
 
 form label{
-    align-self: flex-start;
+    width: 300px;
 
 }
 form input{
     
+    width: 300px;
     margin-bottom: 10px;
-    width:300px;
+    height: 40px;
     background-color: white;
     justify-content: center;
+    border: 1px solid #81b29a;
+    border-radius: 10px;
     
    
 }
 
 h1{
     margin: 0 auto;	
+    margin: 10px auto;
     font-size: 2.5em;
     margin-bottom: 5px;
     font-family: "Magra", sans-serif;
     font-weight: 700;
     font-style: normal;
+    text-align: center;
 }
 
 #aceptar{
@@ -59,12 +68,9 @@ h1{
     font-family: "Hind", sans-serif;
     font-weight: 600;
     font-style: normal;
-
     display:flex;
     flex-direction:column;
-
     border: none;
-    border-radius: 10px;
 }
 .boton:hover{
     filter: brightness(85%);
@@ -74,29 +80,19 @@ h1{
     flex-direction:line;
     align-self: normal;
     justify-content: space-between;
+    padding-inline: 25px;
+}
+
+.tyc{
+    text-align: center;
 }
 
 a, a:hover, a:visited, a:active {
-  color: blue;
+  color: #ff3c38;
   text-decoration: none;
  }
 
  
-@media screen and (max-width: 900px)
-{
-    form{
-        width: 200px;
-        font-size: 0.8em;
-        
-    }
-    
-    form input{
-       width: 200px;
-       
-    }
-
-    
-}
 
 
 
