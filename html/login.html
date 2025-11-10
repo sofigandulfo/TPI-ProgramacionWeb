@@ -7,6 +7,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Hind:wght@300;400;500;600;700&family=Magra:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../css/estilos-login.css">
+   <script src="../js/login.js"></script>
    <title></title>
 </head>
 <body>
@@ -17,14 +18,15 @@
 
          
          <label for="email">Ingrese email: </label>
-         <input type="email" id="campoTextoEmail" placeholder="ejemplo@ejemplo.com">
-
+         <input type="email" class="credencial" id="campoEmail" placeholder="ejemplo@ejemplo.com">
+         <p id="resultEmail"></p>
          <label for="contra">Ingrese contraseña: </label>
          
-         <input type="password" id="campoContra" placeholder="*******">
+         <input type="password" id="campoContra" class="credencial" placeholder="*******">
+         <p id="resultPass" class="result"></p>
       
          <div class="botones">
-            <input type="submit" id="aceptar" class="boton" value="Continar">
+            <input type="submit" id="aceptarBoton" class="botonApagado" value="Continuar">
             <input type="reset" id="cancelar" class="boton" value="Cancelar">
 
          </div>
