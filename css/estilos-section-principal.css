@@ -120,37 +120,17 @@
 }
 
 .efecto-oceania {
-  transition: transform 0.3s;
+ transition: transform 0.4s;
 }
 .efecto-oceania:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
-.click-america {
+.click {
   background-color: var(--light-color-acento-1);
   box-shadow: 0 0 20px 8px var(--light-color-acento-1);
 }
 
-.click-europa {
-  background-color: var(--light-color-acento-2);
-  box-shadow: 0 0 25px 8px var(--light-color-acento-2);
-}
 
-.click-asia {
-  background-color: var(--light-color-acento-3);
-  transform: scale(0.97);
-  box-shadow: 0 0 25px 8px var(--light-color-acento-3);
-}
-
-.click-africa {
-  background-color: var(--dark-color-acento-1);
-  transform: scale(0.97);
-  box-shadow: 0 0 25px 8px var(--dark-color-acento-1);
-}
-
-.click-oceania {
-  background-color: var(--dark-color-acento-2);
-  box-shadow: 0 0 25px 8px var(--dark-color-acento-2);
-}
 
 @media (min-width: 768px) {
     #seccion-categoria {

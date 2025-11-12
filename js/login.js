@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     inputContra.addEventListener('keyup',() =>{
-    const contraValidar = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
+    const contraValidar = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#?!%$])[A-Za-z\d#?!%$]{8,12}$/;
     const contra = inputContra.value;
   
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
          passValido=false;
       
         }else if(contraValidar.test(contra)){
-           resultContra.textContent="";
+           resultContra.textContent=" ";
            passValido=true;
 
            
@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
          if(emailValido&&passValido){
-        botonContinuar.className="boton";
+        botonContinuar.className="boton registro-boton";
          }else{
-            botonContinuar.className="botonApagado";
+            botonContinuar.className="botonApagado registro-boton";
             botonContinuar.disabled = false;
          }
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         emailValido=false;
       
         }else if(emailValidar.test(email)){
-           resultEmail.textContent="";
+           resultEmail.textContent=" ";
            emailValido=true;
 
            
@@ -67,10 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
             resultEmail.textContent=" ";
         }
          if(emailValido&&passValido){
-        botonContinuar.className="boton";
+        botonContinuar.className="boton registro-boton";
+        botonContinuar.disabled = false;
          }else{
-            botonContinuar.className="botonApagado";
-            botonContinuar.disabled = false;
+            botonContinuar.className="botonApagado registro-boton";
+            botonContinuar.disabled = true; 
          }
 
 

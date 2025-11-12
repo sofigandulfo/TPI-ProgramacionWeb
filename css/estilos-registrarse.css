@@ -1,77 +1,127 @@
 ﻿/* estilos-registrarse.css */
 
-body{
-    display: flex;
-    justify-content: center;
-    font-family: "Hind", sans-serif;
-    color: var(--light-color-texto);
-    background-color: var(--light-color-fondo);
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Hind", sans-serif;
+  color: var(--light-color-texto);
+  background-color: var(--light-color-fondo);
 }
 
 .section-formulario-registro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid var(--light-color-acento-3);
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--light-color-acento-3);
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
 }
 
-.formulario-titulo{
-    font-family: "Magra", sans-serif;
-    text-align: center;
-    font-size: 2.5em;
-    margin: 20px 0;
-    font-weight: 700;
-    color: var(--light-color-texto);
+.formulario-titulo {
+  font-family: "Magra", sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  font-weight: 700;
+  color: var(--light-color-texto);
 }
 
 .formulario-registro {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .registro-input {
-    width: auto;
-    padding: 15px;
-    margin: 8px 40px;
-    border: 1px solid var(--light-color-acento-3);
-    border-radius: 6px;
-    background-color: white;
-    color: var(--light-color-texto);
+  width: 70%;
+  padding: 15px;
+  margin: 8px 40px 4px;
+  border: 1px solid var(--light-color-acento-3);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--light-color-texto);
+}
+
+
+.input-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.mensaje-validacion {
+  width: 80%;
+  max-width: 300px;
+  font-size: 0.9em;
+  text-align: start;
+  color: transparent;
+  margin: 26px 40px 0;
+}
+
+
+.invalido {
+  color: #ff3c38;
+  font-weight: 500;
+  margin: 0 40px 0;
 }
 
 .registro-boton {
-    font-family: "Hind", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    background-color: var(--light-color-acento-2);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 14px 40px 6px;
-    cursor: pointer;
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  background-color: var(--light-color-acento-2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 14px 40px 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.registro-boton:hover {
-    background-color: var(--light-color-acento-1);
-    color: white;
+.registro-boton:hover:not(:disabled) {
+  background-color: var(--light-color-acento-1);
+  color: white;
 }
 
 .registro-texto {
-    color: var(--light-color-texto);
+  color: var(--light-color-texto);
 }
 
 .registro-texto a {
-    color: var(--light-color-acento-1);
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--light-color-acento-1);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .link-inicio-sesion {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.boton {
+  background-color: var(--light-color-acento-2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 14px 40px 6px;
+  cursor: pointer;
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.botonApagado {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 14px 40px 6px;
+  font-family: "Hind", sans-serif;
+  font-weight: 600;
+  opacity: 0.7;
 }

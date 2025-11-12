@@ -8,7 +8,7 @@ let linksCategorias = document.querySelectorAll("a.tab-categoria");
 function limpiarClasesEfectos() {
    const cards = document.querySelectorAll(".articulo-categoria");
    cards.forEach((card) => {
-      card.classList.remove("efecto-america", "efecto-europa", "efecto-asia", "efecto-africa", "efecto-oceania", "click-america", "click-europa", "click-asia", "click-africa", "click-oceania");
+      card.classList.remove("efecto-america", "efecto-europa", "efecto-asia", "efecto-africa", "efecto-oceania");
    });
 }
 
@@ -26,7 +26,9 @@ linksCategorias.forEach((linkCategoria) => {
          articuloContenedor.getElementsByClassName("item-valor-portada")[0].src = Portada;
          articuloContenedor.getElementsByClassName("item-valor-portada")[0].alt = Nombre;
          articuloContenedor.getElementsByClassName("item-valor-descripcion")[0].innerText = Descripcion;
-         articuloContenedor.getElementsByClassName("item-valor-rating")[0].innerText = Rating;
+         const rating = articuloContenedor.getElementsByClassName("item-valor-rating")[0];
+         const puntaje = parseInt(Rating);
+         rating.innerText = '★'.repeat(puntaje) + '☆'.repeat(5 - puntaje);
 
          const personalizados = Object.keys(item).filter(key => key.startsWith("personalizado_"));
          
@@ -45,9 +47,9 @@ linksCategorias.forEach((linkCategoria) => {
             cards.forEach((card) => {
                card.classList.add("efecto-america");
                card.addEventListener("click", () => {
-                  card.classList.add("click-america");
+                  card.classList.add("click");
                   setTimeout(() => {
-                     card.classList.remove("click-america");
+                     card.classList.remove("click");
                   }, 600);
                })
             })
@@ -56,9 +58,9 @@ linksCategorias.forEach((linkCategoria) => {
             cards.forEach((card) => {
                card.classList.add("efecto-europa");
                card.addEventListener("click", () => {
-                  card.classList.add("click-europa");
+                  card.classList.add("click");
                   setTimeout(() => {
-                     card.classList.remove("click-europa");
+                     card.classList.remove("click");
                   }, 600);
                })
             })
@@ -67,9 +69,9 @@ linksCategorias.forEach((linkCategoria) => {
             cards.forEach((card) => {
                card.classList.add("efecto-asia");
                card.addEventListener("click", () => {
-                  card.classList.add("click-asia");
+                  card.classList.add("click");
                   setTimeout(() => {
-                     card.classList.remove("click-asia");
+                     card.classList.remove("click");
                   }, 600);
                })
             })
@@ -78,9 +80,9 @@ linksCategorias.forEach((linkCategoria) => {
             cards.forEach((card) => {
                card.classList.add("efecto-africa");
                card.addEventListener("click", () => {
-                  card.classList.add("click-africa");
+                  card.classList.add("click");
                   setTimeout(() => {
-                     card.classList.remove("click-africa");
+                     card.classList.remove("click");
                   }, 600);
                })
             })
@@ -89,10 +91,10 @@ linksCategorias.forEach((linkCategoria) => {
             cards.forEach((card) => {
                card.classList.add("efecto-oceania");
                card.addEventListener("click", () => {
-                  card.classList.add("click-oceania");
+                  card.classList.add("click");
                   setTimeout(() => {
-                     card.classList.remove("click-oceania"), 600;
-                  })
+                     card.classList.remove("click");
+                  }, 600);
                })
             })
             break;
