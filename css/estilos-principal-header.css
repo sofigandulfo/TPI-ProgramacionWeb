@@ -28,15 +28,19 @@
    border-radius: 15px;
    display: flex;
    align-items: center;
+   justify-content: center;
+   
 }
 
 .div2 form{
    height: 100%;
    width: 100%;
-   padding: 5px;
    padding: 11px 5px;
    display: flex;
    align-items: center;
+   justify-content: center;
+  
+   
 }
 
 #buscador{
@@ -44,6 +48,7 @@
    width: 80%;
    border-radius: 10px;
    border: none;
+ 
    
    
 }
