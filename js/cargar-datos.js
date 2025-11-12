@@ -5,8 +5,16 @@ const tabCategoria1 = document.getElementById("tab-categoria-1");
 
 let linksCategorias = document.querySelectorAll("a.tab-categoria");
 
+function limpiarClasesEfectos() {
+   const cards = document.querySelectorAll(".articulo-categoria");
+   cards.forEach((card) => {
+      card.classList.remove("efecto-america", "efecto-europa", "efecto-asia", "efecto-africa", "efecto-oceania", "click-america", "click-europa", "click-asia", "click-africa", "click-oceania");
+   });
+}
+
 linksCategorias.forEach((linkCategoria) => {
    linkCategoria.addEventListener("click", () => {
+      limpiarClasesEfectos();
       items.forEach((item) => {
          const { Categoria, Id, Nombre, Autor, Portada, Descripcion, Rating } = item;
 
@@ -29,6 +37,66 @@ linksCategorias.forEach((linkCategoria) => {
 
          articuloContenedor.id = Id;
       });
+
+      const cards = document.querySelectorAll(".articulo-categoria");
+      
+      switch(linkCategoria.innerText) {
+         case "América":
+            cards.forEach((card) => {
+               card.classList.add("efecto-america");
+               card.addEventListener("click", () => {
+                  card.classList.add("click-america");
+                  setTimeout(() => {
+                     card.classList.remove("click-america");
+                  }, 600);
+               })
+            })
+            break;
+         case "Europa":
+            cards.forEach((card) => {
+               card.classList.add("efecto-europa");
+               card.addEventListener("click", () => {
+                  card.classList.add("click-europa");
+                  setTimeout(() => {
+                     card.classList.remove("click-europa");
+                  }, 600);
+               })
+            })
+            break;
+         case "Asia":
+            cards.forEach((card) => {
+               card.classList.add("efecto-asia");
+               card.addEventListener("click", () => {
+                  card.classList.add("click-asia");
+                  setTimeout(() => {
+                     card.classList.remove("click-asia");
+                  }, 600);
+               })
+            })
+            break;
+         case "África":
+            cards.forEach((card) => {
+               card.classList.add("efecto-africa");
+               card.addEventListener("click", () => {
+                  card.classList.add("click-africa");
+                  setTimeout(() => {
+                     card.classList.remove("click-africa");
+                  }, 600);
+               })
+            })
+            break;
+         case "Oceanía":
+            cards.forEach((card) => {
+               card.classList.add("efecto-oceania");
+               card.addEventListener("click", () => {
+                  card.classList.add("click-oceania");
+                  setTimeout(() => {
+                     card.classList.remove("click-oceania"), 600;
+                  })
+               })
+            })
+            break;
+      }
    });
 });
 
