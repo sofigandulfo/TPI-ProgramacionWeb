@@ -1,5 +1,4 @@
-﻿/* @import url("temas-colores-fuentes.css"); */
-
+﻿
 .grid{
    display: grid;
    grid-gap: 10px;
@@ -7,7 +6,7 @@
    grid-template-rows: 1fr 3fr;
    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
    padding: 15px;
-   
+
 }
 
 
@@ -29,7 +28,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   
+
 }
 
 .div2 form{
@@ -39,8 +38,8 @@
    display: flex;
    align-items: center;
    justify-content: center;
-  
-   
+
+
 }
 
 #buscador{
@@ -48,16 +47,16 @@
    width: 80%;
    border-radius: 10px;
    border: none;
- 
-   
-   
+
+
+
 }
 .div3{
    grid-column: 3;
    grid-row: 1;
    background-color: #81b29a;
    border-radius: 15px;
-   
+
    display: flex;
    flex-direction: line;
    align-items: center;
@@ -86,9 +85,25 @@ header img{
     align-items: center;
 }
 .carrusel-imagenes{
+   display: flex;
+   flex-direction: column;
    margin: 15px;
    border-radius: 10%;
+   height: 300px;
+   width: 500px;
+   align-items: center;
+   justify-items: center;
+   justify-content: center;
+   align-items: center;
+   object-fit: cover;
 }
+
+.carrusel-imagenes img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
 .retroceder, .avanzar{
    margin-top: 15px;
    margin-bottom: 15px;
@@ -104,9 +119,21 @@ header img{
    background-color: #fff0f5;
 }
 .carrusel-imagenes img{
+   align-self: center;
+   justify-self: center;
+   max-height: 100%;
+   max-width: 100%;
    margin: 0;
-   width: 100%;
-   height: 100%;
+   width: 80%;
+   height: 80%;
+}
+
+.carrusel-imagenes p{
+   font-family: 'Magra', sans-serif;
+
+    font-size: 1.3em;
+    margin: 0;
+    padding: 20px 16px 8px;
 }
 
 
@@ -123,7 +150,7 @@ header img{
 
    .div3{
       justify-content: space-between;
-      
+
    }
 
 }

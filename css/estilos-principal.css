@@ -7,12 +7,15 @@
 
 #navegacion-categoria {
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    gap: 10px; 
    margin: 20px 0;
+   padding: 0 20px;
 }
 
 #navegacion-categoria .tab-categoria {
+   flex: 1;
+   text-align: center;
    font-family: 'Magra', sans-serif;
    padding: 10px 20px;
    border-radius: 6px;

@@ -1,17 +1,32 @@
-const imagenes = [
-    "assets/img/categoria00-item01.png",
-    "assets/img/categoria00-item02.png",
-    "assets/img/categoria00-item03.png",
-    "assets/img/categoria00-item04.png",
-    "assets/img/categoria00-item05.png"
-];
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+const imagenes = [];
+const nombres = [];
+const articulos = document.querySelectorAll(".articulo-categoria");
 const imagen = document.getElementById("img")
+const nombre = document.getElementById("titulo-carrousel")
 const btnatras = document.querySelector(".retroceder");
 const btnavanzar = document.querySelector(".avanzar");
 let iterador = 0;
 
+articulos.forEach(item => {
+    if(imagenes.length<5){
+        let imgextraida = item.querySelector(".item-valor-portada").src;
+        let nombreextraido = item.querySelector(".item-valor-nombre").textContent;
+        console.log(nombreextraido);
+        imagenes.push(imgextraida);
+        nombres.push(nombreextraido);
+        console.log(imgextraida);  
+    }
+
+});
 function mostrarImagen() {
-    imagen.src = imagenes[iterador];
+        nombre.textContent=nombres[iterador];
+        imagen.src = imagenes[iterador];
+
+
 }
 mostrarImagen();
 
@@ -24,7 +39,7 @@ btnavanzar.addEventListener("click", () => {
 });
 btnatras.addEventListener("click", () => {
     iterador--;
-    if (iterador < imagenes.length) {
+    if (iterador < 0) {
         iterador = (imagenes.length - 1);
     }
     mostrarImagen();
@@ -38,3 +53,4 @@ setInterval(() => {
     iterador = random;
     mostrarImagen();
 }, 5000);
+});
