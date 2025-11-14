@@ -1,0 +1,132 @@
+﻿
+body {
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff0f5;
+}
+
+.formulario {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fafafa;
+    
+    
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #222;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fila {
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.fila div {
+    flex: 1;
+    
+}
+
+.btn {
+    background-color: #81b29a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    filter: brightness(85%);
+}
+
+.contrasenia-contenedor {
+    display: inline;
+}
+
+.btn-sec {
+    background-color: #ffb347;
+    color: white;
+    margin: 5px;
+    padding: auto 30px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-sec:hover {
+    filter: brightness(85%);;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+h2{
+    margin: 0 auto;	
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.input-invalido {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ff3c38;
+    border-radius: 4px;
+    background-color:#ff6b66 ;
+    
+}
+
+.input-valido {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #81b29a;
+    border-radius: 4px;
+    background-color:#a3c9b6 ;
+    
+}
+
+.btn-apagado{
+    background-color: grey;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}

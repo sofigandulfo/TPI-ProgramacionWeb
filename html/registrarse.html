@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/temas-colores-fuentes.css">
+   <link rel="stylesheet" href="/css/estilos-registrarse.css">
+   <script src="../js/login.js"></script>
+   <title>Registrarse</title>
+</head>
+<body>
+   <section class="section-formulario-registro">      
+      <h1 class="formulario-titulo">Registrarse</h1>
+      <form class="formulario-registro" action="/registrarse" method="POST">
+         <div class="input-contenedor">
+            <input class="registro-input" type="email" id="campoEmail" name="email" placeholder="Email*" required>
+            <p id="resultEmail" class="mensaje-validacion"></p>
+         </div>
+
+         <div class="input-contenedor">
+            <input class="registro-input" type="password" id="campoContra" name="password" placeholder="Contraseña*" required minlength="6">
+            <p id="resultPass" class="mensaje-validacion"></p>
+         </div>
+
+         <button id="aceptarBoton" class="botonApagado registro-boton" type="submit" disabled>REGISTRATE</button>
+         <p class="registro-texto">¿Ya tienes una cuenta? <a class="link-inicio-sesion" href="/html/login.html">Iniciar sesión</a></p>      
+         <p class="registro-texto">Al continuar, confirmo que he leído y aceptado los <a href="#">Términos y Condiciones</a> y las <a href="#">Politicas y Privacidad</a></p>
+      </form>  
+   </section>
+   
+</body>
+</html>

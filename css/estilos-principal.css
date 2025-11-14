@@ -1,0 +1,65 @@
+﻿/* @import url("temas-colores-fuentes.css"); */
+
+/*#encabezado-principal {
+   background-color: red;
+   color: white;
+}*/
+
+#navegacion-categoria {
+   display: flex;
+   justify-content: center;
+   gap: 10px; 
+   margin: 20px 0;
+}
+
+#navegacion-categoria .tab-categoria {
+   font-family: 'Magra', sans-serif;
+   padding: 10px 20px;
+   border-radius: 6px;
+   background-color: #ffb347;
+   border: 1px solid #ccc;
+   text-decoration: none;
+   color: #333;
+   font-weight: 500;
+}
+#navegacion-categoria .tab-categoria:hover {
+   background-color: #ff6b66;
+}
+
+#navegacion-categoria .tab-categoria:active {
+   background-color: #ff3c38; 
+   color: black;
+   border-color: #ff3c38;
+}
+
+#seccion-categoria {
+   min-height: 720px;
+   background-color: var(--light-color-fondo);
+}
+
+.articulo-categoria {
+   border: solid 3px gray;
+}
+
+#footer-principal {
+   background-color: blue;
+   color: white;
+}
+
+#qr-code {
+   width:100px;
+   height:100px;
+}
+
+@media screen and (max-width: 768px) {
+   #navegacion-categoria {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+
+   #navegacion-categoria .tab-categoria {
+      width: 80%;   
+   }
+}
+
