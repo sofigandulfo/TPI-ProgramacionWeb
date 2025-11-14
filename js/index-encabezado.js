@@ -10,9 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if(contenido.length>=3){
             articulos.forEach(item=>{
-                item.hidden=false;
+                item.hidden=true;
                 let nombre = item.querySelector(".item-valor-nombre").textContent;
-                if(!nombre.trim().toLowerCase().includes(contenido.trim().toLowerCase())){
+                let autor = item.querySelector(".item-valor-autor").textContent;
+                let descripcion = item.querySelector(".item-valor-descripcion").textContent;
+                if(nombre.trim().toLowerCase().includes(contenido.trim().toLowerCase())||autor.trim().toLowerCase().includes(contenido.trim().toLowerCase())||descripcion.trim().toLowerCase().includes(contenido.trim().toLowerCase())){
+                    item.hidden=false;
+                }else{
                     item.hidden=true;
                 }
                 
