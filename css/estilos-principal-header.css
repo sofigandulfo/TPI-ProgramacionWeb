@@ -81,8 +81,9 @@ header img{
 
 
 .carrusel{
-display: flex;
-justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .carrusel-imagenes{
    margin: 15px;
@@ -95,6 +96,9 @@ justify-content: center;
     background-color: #ff9f1c;
     transition: 0.2s ease;
     cursor: pointer;
+    height: 50px;
+    width: 50px;
+
 }
 .retroceder:hover, .avanzar:hover{
    background-color: #fff0f5;
