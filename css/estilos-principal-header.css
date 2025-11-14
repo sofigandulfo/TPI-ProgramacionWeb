@@ -80,6 +80,57 @@ header img{
 }
 
 
+.carrusel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrusel-imagenes{
+   display: flex;
+   flex-direction: column;
+   margin: 15px;
+   border-radius: 10%;
+   height: 300px;
+   width: 500px;
+   align-items: center;
+   justify-items: center;
+   justify-content: center;
+   align-items: center;
+}
+.retroceder, .avanzar{
+   margin-top: 15px;
+   margin-bottom: 15px;
+   border-radius: 20px;
+    background-color: #ff9f1c;
+    transition: 0.2s ease;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+
+}
+.retroceder:hover, .avanzar:hover{
+   background-color: #fff0f5;
+}
+.carrusel-imagenes img{
+   align-self: center;
+   justify-self: center;
+   max-height: 100%;
+   max-width: 100%;
+   margin: 0;
+   width: 80%;
+   height: 80%;
+}
+
+.carrusel-imagenes p{
+   font-family: 'Magra', sans-serif;
+   
+    font-size: 1.3em;
+    margin: 0;
+    padding: 20px 16px 8px;
+}
+
+
+
 @media (max-width: 768px) {
     header img{
       width: 25px;
