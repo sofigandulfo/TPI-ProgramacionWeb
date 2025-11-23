@@ -29,9 +29,9 @@
    background-color: #ff6b66;
 }
 
-#navegacion-categoria .tab-categoria:active {
-   background-color: #ff3c38; 
-   color: black;
+#navegacion-categoria .active {
+   background-color: #ff3c38;
+   color: white;
    border-color: #ff3c38;
 }
 
