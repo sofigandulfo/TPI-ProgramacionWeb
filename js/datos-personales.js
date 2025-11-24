@@ -12,6 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputEmailSec = document.getElementById('email-sec');
     const form = document.getElementsByClassName('input');
 
+    const inputNacimiento = document.getElementById('nacimiento');
+    const hoy = new Date().toISOString().split('T')[0];
+    inputNacimiento.setAttribute('max', hoy);
+
+
     let nombreValido = true;
     let apellidoValido = true;
     let docValido = true;
