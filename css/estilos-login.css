@@ -1,0 +1,113 @@
+﻿/* estilos-login.css */
+
+body{	
+    background-color: #fff0f5;
+    border-color: #81b29a;
+	
+}
+
+.login-section{
+    background-color: white;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #81b29a;
+     font-family: "Hind", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+    
+    
+    
+}
+
+form{   
+    align-items:center;
+	display:flex;
+	flex-direction:column;	
+}
+
+form label{
+    width: 300px;
+
+}
+form input{
+    width: 300px;
+    margin-bottom: 10px;
+    background-color: white;
+    justify-content: center;
+    border: 1px solid #81b29a;
+    border-radius: 6px;
+    padding:15px;
+   
+}
+
+h1{
+    margin: 0 auto;	
+    margin: 10px auto;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+
+
+#cancelar{
+    background-color: #ffb347;
+}
+
+.boton{
+    
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display:flex;
+    flex-direction:column;
+    border: none;
+    background-color: #81b29a;
+}
+.boton:hover{
+    filter: brightness(85%);
+}
+.links{
+    display:flex;
+    flex-direction:line;
+    align-self: normal;
+    justify-content: space-between;
+    padding-inline: 25px;
+}
+
+.tyc{
+    text-align: center;
+}
+
+a, a:hover, a:visited, a:active {
+  color: #ff3c38;
+  text-decoration: none;
+ }
+
+.invalido{
+    width: 300px;
+    color: #ff3c38;
+    text-decoration: none;
+    padding: 0%;
+    margin: 0%;
+    align-self: center;
+
+}
+
+.botonApagado{
+    background-color:gray;
+    font-family: "Hind", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    display:flex;
+    flex-direction:column;
+    border: none;
+}
+
+ 
+
+
+

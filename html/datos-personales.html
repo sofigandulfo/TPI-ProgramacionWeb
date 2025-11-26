@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilos-datos-personales.css">
+    <script src="../js/datos-personales.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim:wght@400..800&family=Hind:wght@300;400;500;600;700&family=Magra:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Datos Personales</title>
+</head>
+
+<body>
+
+    <section class="formulario">
+        <h2>Mi usuario</h2>
+        <form>
+            <label for="email">Email principal</label>
+            <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+
+            <button type="submit" class="btn" id="boton-cambios-uno">GUARDAR CAMBIOS</button>
+            <hr>
+            <label for="contra">Contraseña</label>
+            <div class="contrasenia-contenedor">
+                <input type="password" id="contra" name="contra" placeholder="******" required>
+                <button type="button" class="btn-sec">CAMBIAR</button>
+            </div>
+           
+        </form>
+
+    </section>
+     <hr id="main-hr">
+    <section class="formulario">
+        <h2>Datos personales</h2>
+        <form>
+            <div class="fila">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="input">
+                </div>
+                <div>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="input"
+                    " >
+                </div>
+            </div>
+
+            <div class="fila">
+                <div>
+                    <label for="tipo">Tipo</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="cuit">CUIT</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="documento">Nro de documento</label>
+                    <input type="text" id="documento" name="documento" class="input">
+                </div>
+                <div>
+                    <label for="nacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento" class="input">
+                </div>
+            </div>
+
+            <div class="fila">
+                <div>
+                    <label for="telefono">Teléfono celular</label>
+                    <input type="text" id="telefono" name="telefono" class="input">
+                </div>
+                <div>
+                    <label for="email-sec">Email secundario</label>
+                    <input type="email" id="email-sec" name="email-sec" class="input">
+                </div>
+            </div>
+
+            <button type="submit" class="btn" id="boton-cambios-dos">GUARDAR CAMBIOS</button>
+        </form>
+    </section>
+
+</body>
+
+</html>
