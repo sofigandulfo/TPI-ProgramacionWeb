@@ -92,18 +92,16 @@ header img{
    align-items: center;
 }
 
-.carrusel-imagenes{
-   display: flex;
-   flex-direction: column;
+.carrusel-imagenes {
+   width: 100%;
+   max-width: 500px;   
    margin: 15px;
    border-radius: 10%;
-   height: 300px;
-   width: 500px;
-   align-items: center;
-   justify-items: center;
+   display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   object-fit: cover;
+   overflow: hidden; 
 }
 
 .carrusel-imagenes img {
@@ -138,7 +136,6 @@ header img{
 
 .carrusel-imagenes p{
    font-family: 'Magra', sans-serif;
-
     font-size: 1.3em;
     margin: 0;
     padding: 20px 16px 8px;
@@ -181,6 +178,16 @@ header img{
 
    }
 
+    .carrusel-imagenes {
+      max-width: 300px;
+      aspect-ratio: 4/3;
+   }
+
+   .retroceder,
+    .avanzar {
+         height: 30px;
+         width: 30px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -189,5 +196,11 @@ header img{
         grid-column-gap: 32px;
         grid-row-gap: 32px;
         padding: 32px;
+    }
+
+    .retroceder,
+    .avanzar {
+         height: 40px;
+         width: 40px;
     }
 }
