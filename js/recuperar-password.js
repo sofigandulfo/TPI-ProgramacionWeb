@@ -1,27 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form=document.getElementById('formContraseñaOlvidada');
-    const emailInput=document.getElementById('email');
-    form.addEventListener('submit', (Event) => {
-        Event.preventDefault ();
-        const email=emailInput.value.trim ();
+document.addEventListener("DOMContentLoaded", () => {
 
-        if(email===""){
-            alert('Por favor, ingresa tu correo electronico.');
-            return;
+    const form = document.getElementById("formContraseñaOlvidada");
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const btn = document.querySelector(".btnEnviarEnlace");
+
+    btn.disabled = true;
+    btn.classList.add("btnDeshabilitado");
+
+
+    const validarEmail = () => {
+        const email = emailInput.value.trim();
+
+        const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+
+        if (email === "") {
+            emailError.textContent = "Campo obligatorio.";
+            emailInput.classList.add("input-invalido");
+            return false;
         }
 
-        //como no hay backend hacemos una simlacion del envio del correo
-        console.log('Simulando envio de enlace de recuperacion para:${email}');
+        if (!regex.test(email)) {
+            emailError.textContent = "Ingrese un email válido";
+            emailInput.classList.add("input-invalido");
+            return false;
+        }
 
-        //Aqui es donde se enviaria la solicitud al servidor
-        setTimeout( () => {
-            alert('Enlace de recuperacion enviado. ¡Revisa tu bandeja dse entrada!');
+        emailError.textContent = "";
+        emailInput.classList.remove("input-invalido");
+        return true;
+    };
+   
+    const actualizarBoton = () => {
+        if (validarEmail()) {
+            btn.disabled = false;
+            btn.classList.remove("btnDeshabilitado");
+        } else {
+            btn.disabled = true;
+            btn.classList.add("btnDeshabilitado");
+        }
+    };
 
-            //Podemos limpiar el formulario y deshabilitar el boton temporalmente
-            form.reset ();
+    emailInput.addEventListener("keyup", actualizarBoton);
 
-        },1500); //simula un retraso de red de 1.5 segundos
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
+        if (!validarEmail()) return;
 
+        setTimeout(() => {
+            alert("Enlace de recuperación enviado. ¡Revisá tu bandeja de entrada!");
+            form.reset();
+            actualizarBoton();
+        }, 1000);
     });
+
 });
