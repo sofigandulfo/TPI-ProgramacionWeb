@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const inputContra = document.getElementById('campoContra');
     const resultContra = document.getElementById('resultPass');
@@ -10,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     botonContinuar.disabled = true;
     let emailValido=false;
     let passValido=false;
+   
     
     
      
@@ -76,39 +74,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
-
-    function login(){
-        const contra = inputContra.value.trim();
-        const email = inputEmail.value.trim();
-        
-
-
-    
-        const usuario = {
-            contra: contra,
-            email: email,
-            fechaGuardado: new Date().toLocaleDateString()
-        };
-
-    
-        const usuarioJSON = JSON.stringify(usuario);
-
-        Object.keys(localStorage).forEach(key=>{
-            const valorGuardado = localStorage.getItem(key);
-            
-            if(valorGuardado==usuarioJSON){
-                console.log("Usuario encontrado");
-                location.href = '../index.html';
-                
-            }else{
-                resultContra.textContent="Usuario No encontrado";
-            }
-        });
-        
-    }
-
-    botonContinuar.addEventListener("click",login)
    
+    function guardarDatos() {
+    const contra = inputContra.value.trim();
+    const email = inputEmail.value.trim();
+
+
+    
+    const usuario = {
+        contra: contra,
+        email: email,
+        fechaGuardado: new Date().toLocaleDateString()
+    };
+
+    
+    const usuarioJSON = JSON.stringify(usuario);
+   
+
+    
+    localStorage.setItem(localStorage.length, usuarioJSON);
+    
+    console.log(localStorage);
+
+    location.href = '../index.html';
+    
+    
+}
+
+botonContinuar.addEventListener('click',guardarDatos);
 
     
 

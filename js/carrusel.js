@@ -38,9 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mostrarImagen();
         iniciarIntervalo();
     });
-    PUNTOS.addEventListener("click",() => {
-
-    });
+    
     CATEGORIAS.forEach(tab => {
         tab.addEventListener("click", () => {
             imagenes.length = 0;
