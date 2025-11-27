@@ -38,6 +38,10 @@ linksCategorias.forEach((linkCategoria) => {
          });
 
          articuloContenedor.id = Id;
+
+      
+
+         
       });
 
       const cards = document.querySelectorAll(".articulo-categoria");
@@ -105,3 +109,93 @@ linksCategorias.forEach((linkCategoria) => {
 if (configuracion["modo-test-prod"] === "prod") {
    tabCategoria1.click();
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    let imagenes = [];
+    let nombres = [];
+    let intervalo = null;
+    console.log(linksCategorias);
+
+    let articulos = document.querySelectorAll(".articulo-categoria");
+    const IMAGEN = document.getElementById("img")
+    const NOMBRE = document.getElementById("titulo-carrousel")
+    const BTNATRAS = document.querySelector(".retroceder");
+    const BTNAVANZAR = document.querySelector(".avanzar");
+    const CATEGORIAS = document.querySelectorAll(".tab-categoria");
+    const PUNTOS = document.querySelectorAll(".punto");
+
+    let iterador = 0;
+
+    cargariamgenes();
+    mostrarImagen();
+    iniciarIntervalo();
+
+    BTNAVANZAR.addEventListener("click", () => {
+        stopIntervalo();
+        PUNTOS[iterador].classList.remove("punto-seleccionado");
+        iterador++;
+        if (iterador >= imagenes.length) {
+            iterador = 0;
+        }
+        mostrarImagen();
+        iniciarIntervalo();
+    });
+    BTNATRAS.addEventListener("click", () => {
+        stopIntervalo();
+        PUNTOS[iterador].classList.remove("punto-seleccionado");
+        iterador--;
+        if (iterador < 0) {
+            iterador = (imagenes.length - 1);
+        }
+        mostrarImagen();
+        iniciarIntervalo();
+    });
+    
+   
+    function cargariamgenes() {
+        
+         linksCategorias.forEach((linkCategoria) => {  
+            let imagenesPorCat = [];
+            let nombresPorCat= [];
+            let x = Math.floor(Math.random() * (11 - 0 + 1));
+            items.forEach((item) => {
+            if((linkCategoria.innerText == item.Categoria)){
+               imagenesPorCat.push(item.Portada);
+               nombresPorCat.push(item.Nombre);
+            }
+            
+            
+            
+            
+            });
+            console.log(x);
+           imagenes.push(imagenesPorCat[x]);
+           nombres.push(nombresPorCat[x]);
+            
+   
+         });
+         console.log(imagenes);
+    }
+    function mostrarImagen() {
+        NOMBRE.textContent = nombres[iterador];
+        IMAGEN.src = imagenes[iterador];
+        PUNTOS[iterador].classList.add("punto-seleccionado");
+    }
+    function iniciarIntervalo() {
+        intervalo = setInterval(() => {
+        PUNTOS[iterador].classList.remove("punto-seleccionado");
+        let random;
+        do {
+            random = Math.floor(Math.random() * 5);
+        } while (random == iterador);
+        iterador = random;
+        mostrarImagen();
+    }, 6000);
+    }
+    function stopIntervalo() {
+        clearInterval(intervalo);
+        intervalo = null;
+    }
+
+});
