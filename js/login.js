@@ -1,6 +1,3 @@
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const inputContra = document.getElementById('campoContra');
     const resultContra = document.getElementById('resultPass');
@@ -98,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if(valorGuardado==usuarioJSON){
                 console.log("Usuario encontrado");
+                localStorage.setItem("logueado", "true");
                 location.href = '../index.html';
                 
             }else{

@@ -93,16 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     localStorage.setItem(localStorage.length, usuarioJSON);
+    localStorage.setItem("registrado", "true");
     
     console.log(localStorage);
-
-    location.href = '../index.html';
+    window.location.href = '../index.html';
     
     
 }
 
-botonContinuar.addEventListener('click',guardarDatos);
+const form = document.querySelector('.formulario-registro');
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();  
+    guardarDatos();      
+});
     
 
     
